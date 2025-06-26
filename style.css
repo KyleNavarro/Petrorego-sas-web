@@ -1,39 +1,83 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    /* padding:0; */
+    padding:0;
     font-family: sans-serif;
     list-style: none;
     text-decoration: none;
     color:#FAF2F2 ;
+    background-color: #282828;
 }
 
-body{
-    background-color: #333333;
-    margin: 0 auto;
-}
+
 
 .logo img{
     width: 250px;
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
 header{
+    
     display: flex;
     align-items: center;
     justify-content: center;
     background-color:#282828;
     height: 175px;
+    
 }
+
+.container{
+    margin: 0 auto;
+    width: 800px;
+    display: grid;
+    grid-template-rows:70vh 200px 100px;
+    grid-template-areas: 
+        
+        "section section section"
+        "sidebar sidebar sidebar"
+        "footer footer footer"
+    ;
+} 
+
+header{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#282828;
+    height: 175px;
+    
+}
+
+.container aside{
+    background:red;
+    grid-area:sidebar;
+    
+    
+}
+
+.container section{
+    background: #FAF2F2;
+    grid-area: section;
+}
+
+.container footer{
+    background: yellow;
+    grid-area: footer;
+    
+}
+
+
+    
 
 .menu{
     display: flex;
     flex-direction: row-reverse;
     
-}
-
-
-.menu > a{
-
 }
 
 .menu li{
@@ -74,4 +118,23 @@ header{
 
 .menu li:hover .submenu{
     display: block;
+}
+
+
+.face{
+    
+    display: grid;
+    grid-column: 1 fr;
+    grid-row: 300px 450px;
+}
+
+:root {
+  --fancy-gradient: linear-gradient(to right, #FFD703, #e52e71);
+}
+.title{
+    background: var(--fancy-gradient);
+}
+
+.information{
+    background-color: #282828;
 }
